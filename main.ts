@@ -31,7 +31,7 @@ namespace web {
     //% help=serial/write-value
     //% blockId=serial_writevalue block="serial|write value %name|= %value"
     export function writeValue(name: string, value: number): void {
-        writeLine("{\"t:" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":" + name + ",\"v\":" + value);
+        writeLine("{\"t:" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + name + "\",\"v\":" + value + "}");
     }
 
 }
