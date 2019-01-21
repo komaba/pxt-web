@@ -8,8 +8,6 @@ namespace web {
      * Print a line of text to the serial port
      * @param value to send over serial
      */
-    //% weight=90
-    //% help=serial/write-line blockGap=8
     //% blockId=serial_writeline block="serial|write line %text"
     //% text.shadowOptions.toString=true
     function writeLine(text: string): void {
@@ -27,8 +25,6 @@ namespace web {
      * @param name name of the value stream, eg: x
      * @param value to write
      */
-    //% weight=88 blockGap=8
-    //% help=serial/write-value
     //% blockId=serial_writevalue block="serial|write value %name|= %value"
     export function writeValue(name: string, value: number): void {
         writeLine("{\"t:" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + name + "\",\"v\":" + value + "}");
