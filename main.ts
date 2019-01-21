@@ -2,7 +2,6 @@
  * Reading and writing data over a serial connection.
  */
 //% weight=2 color=#002050 icon="\uf287"
-//% advanced=true
 namespace web {
     
     /**
@@ -13,7 +12,7 @@ namespace web {
     //% help=serial/write-line blockGap=8
     //% blockId=serial_writeline block="serial|write line %text"
     //% text.shadowOptions.toString=true
-    export function writeLine(text: string): void {
+    function writeLine(text: string): void {
         if (!text) text = "";
         // pad data to the 32 byte boundary
         // to ensure apps receive the packet
