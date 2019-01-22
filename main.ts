@@ -8,9 +8,9 @@ namespace web {
      * @param name name of the value stream, eg: x
      * @param value to write
      */
-    //% blockId=serial_writevalue block="send value %name|= %value"
-    export function writeValue(name: string, value: number): void {
-        serial.writeLine("{\"t:" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + name + "\",\"v\":" + value + "}");
+    //% blockId=serial_writeid_value block="IDと値を送る %id|= %value"
+    export function writeValue(id: string, value: number): void {
+        serial.writeLine("{\"t:" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + id + "\",\"v\":" + value + "}");
     }
 
 }
