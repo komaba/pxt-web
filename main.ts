@@ -5,7 +5,7 @@
 namespace web {
     /**
      * Write a name:value pair as a line to the serial port.
-     * @param name name of the value stream, eg: x
+     * @param id name of the value stream, eg: id
      * @param value to write
      */
     //% blockId=serial_writeid_value block="IDと値を送る %id|= %value"
