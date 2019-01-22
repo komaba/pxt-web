@@ -3,6 +3,15 @@
  */
 //% weight=2 color=#3276f4 icon="\uf0c2"
 namespace web {
+    //% blockId=serial_initialize block="初期化"
+    export function serialInitialize(): void {
+        serial.redirect(
+            SerialPin.USB_TX,
+            SerialPin.USB_RX,
+            BaudRate.BaudRate115200
+        )
+    }
+
     /**
      * Write a name:value pair as a line to the serial port.
      * @param id name of the value stream, eg: id
