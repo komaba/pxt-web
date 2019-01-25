@@ -19,7 +19,7 @@ namespace web {
      */
     //% blockId=serial_writeid_value block="IDと値を送る %id|= %value"
     export function writeValue(id: string, value: number): void {
-        serial.writeLine("{\"t:\"" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + id + "\",\"v\":" + value + "}");
+        serial.writeLine("{\"t\":" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + id + "\",\"v\":" + value + "}");
     }
 
 
