@@ -22,6 +22,13 @@ namespace web {
         serial.writeLine("{\"t\":" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + id + "\",\"v\":" + value + "}");
     }
 
+    //% blockId=serial_result block="結果"
+    export function result() {
+        let line = serial.readLine();
+        return line;
+
+    }
+
     //% blockId=serial_result2 block="結果2"
     export function result2(): void {
         let getid = serial.readUntil('",');
