@@ -25,8 +25,8 @@ namespace web {
     //% blockId=serial_result block="結果"
     export function result() {
         let line = serial.readLine();
-        return line;
-
+        let n = line.substr(6)
+        return n;
     }
 
     //% blockId=serial_result2 block="結果2"
