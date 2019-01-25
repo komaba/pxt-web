@@ -27,10 +27,7 @@ namespace web {
         let line = serial.readLine();
         let n = line.substr(6, 8)
         let v = line.substr(21, 10)
-        if (parseInt(v) == control.deviceSerialNumber()) {
-            return n;
-        }
-        else return "";
+         return n;
     }
 
     //% blockId=serial_result2 block="結果2"
