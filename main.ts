@@ -23,7 +23,7 @@ namespace web {
     }
 
     //% blockId=serial_result block="結果"
-    function result1(): void {
+    export function result(): void {
         let line = serial.readLine();
         let v = line.substr(21, 10)
         if (parseInt(v) == control.deviceSerialNumber()) {
