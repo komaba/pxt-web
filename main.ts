@@ -25,8 +25,12 @@ namespace web {
     //% blockId=serial_result block="結果"
     export function result() {
         let line = serial.readLine();
-        let n = line.substr(6)
-        return n;
+        let n = line.substr(6, 8)
+        let v = line.substr(21, 10)
+        if (parseInt(v) == control.deviceSerialNumber()) {
+            return n;
+        }
+        else return 0;
     }
 
     //% blockId=serial_result2 block="結果2"
