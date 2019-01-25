@@ -25,7 +25,7 @@ namespace web {
     //% blockId=serial_result block="結果"
     export function result(): void {
         let line = serial.readLine();
-        let v = line.substr(21, 10)
+        let v = line.substr(11, 20)
         basic.showString(v)
         
     }
