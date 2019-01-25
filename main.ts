@@ -3,6 +3,7 @@
  */
 //% weight=2 color=#3276f4 icon="\uf0c2"
 namespace web {
+    let n :string
     //% blockId=serial_initialize block="初期化"
     export function serialInitialize(): void {
         serial.redirect(
@@ -22,23 +23,18 @@ namespace web {
         serial.writeLine("{\"t\":" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + id + "\",\"v\":" + value + "}");
     }
 
-    //% blockId=serial_result block="結果"
-    export function result() {
+    
+    function result1(): void {
         let line = serial.readLine();
-        let n = line.substr(6, 8)
         let v = line.substr(21, 10)
-         return n;
+        if (parseInt(v) == control.deviceSerialNumber()) {
+            let n = line.substr(6, 8);
+        }
     }
 
-    //% blockId=serial_result2 block="結果2"
-    export function result2(): void {
-        let getid = serial.readUntil('",');
-        let getserial = serial.readUntil('}')
-        let n = getid.substr(6)
-        let v = getserial.substr(6)
-        if (parseInt(v) == control.deviceSerialNumber()) {
-            basic.showString(n);
-        }
+    //% blockId=serial_result block="結果"
+    export function result(){
+        return n;
     }
 
 }
