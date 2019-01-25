@@ -27,10 +27,9 @@ namespace web {
         let line = serial.readLine();
         let v = line.substr(21, 10)
         basic.showString(v)
-        if (parseInt(v) == control.deviceSerialNumber()) {
-            let n = line.substr(6, 8);
-            basic.showString(n)
-        }
+        
     }
+
+    
 
 }
