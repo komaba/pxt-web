@@ -22,18 +22,5 @@ namespace web {
         serial.writeLine("{\"t:" + input.runningTime() + ",\"s\":" + control.deviceSerialNumber() + ",\"n\":\"" + id + "\",\"v\":" + value + "}");
     }
 
-    //% blockId=serial_result block="結果"
-    export function result(): void {
-        let line = serial.readLine();
-        let regexp = /\{\"n\":([^\"]*)\",\"v\":(\d+)/
-        let n, v = line.replace(regexp, '$1, $2')
-        if (v = control.deviceSerialNumber()) {
-            return n;
-        }
-    }
-
-
-
-    
 
 }
