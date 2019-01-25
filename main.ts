@@ -26,7 +26,7 @@ namespace web {
     export function result() {
         let line = serial.readLine();
         let v = line.substr(11, 20);
-        let n = line.substr(6, 5);
+        let n = line.substr(0, 5);
         return n;
     }
 
